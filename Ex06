@@ -1,0 +1,43 @@
+
+        {
+            Console.Write("Digite um valor positivo (X): ");
+            valorX = Convert.ToDouble(Console.ReadLine());
+
+            if (valorX > 0)
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Valor inválido. Por favor, digite um valor positivo.");
+            }
+        }
+
+        int intervaloA, intervaloB;
+
+        Console.Write("Digite o valor inicial do intervalo (A): ");
+        intervaloA = Convert.ToInt32(Console.ReadLine());
+
+        while (true)
+        {
+            Console.Write("Digite o valor final do intervalo (B - deve ser maior que A): ");
+            intervaloB = Convert.ToInt32(Console.ReadLine());
+
+            if (intervaloB > intervaloA)
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Valor inválido. O valor final do intervalo (B) deve ser maior que o valor inicial (A).");
+            }
+        }
+
+        Console.WriteLine($"Tabuada do número {valorX} no intervalo de {intervaloB} para {intervaloA}:");
+        
+        for (int i = intervaloB; i >= intervaloA; i--)
+        {
+            Console.WriteLine($"{valorX} x {i} = {valorX * i}");
+        }
+    }
+}

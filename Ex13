@@ -1,0 +1,32 @@
+
+            {
+                Console.Write("Digite um número para calcular o fatorial: ");
+                if (!int.TryParse(Console.ReadLine(), out numero) || numero < 0)
+                {
+                    Console.WriteLine("Valor inválido. Por favor, digite um número inteiro não negativo.");
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            long fatorial = 1;
+            for (int i = 1; i <= numero; i++)
+            {
+                fatorial *= i;
+            }
+
+            Console.WriteLine($"O fatorial de {numero} é: {fatorial}");
+
+            Console.Write("Deseja calcular o fatorial de outro número? (S/N): ");
+            string resposta = Console.ReadLine().ToUpper();
+
+            if (resposta != "S")
+            {
+                break;
+            }
+
+        } while (true);
+    }
+}

@@ -1,0 +1,24 @@
+class Program
+{
+    static void Main()
+    {
+        string sexo;
+
+        while (true)
+        {
+            Console.Write("Digite o sexo (F para feminino, M para masculino): ");
+            sexo = Console.ReadLine().ToUpper();
+
+            if (sexo == "F" || sexo == "M")
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Entrada inválida. Por favor, digite 'F' para feminino ou 'M' para masculino.");
+            }
+        }
+
+        Console.WriteLine($"Sexo inserido: {sexo}");
+    }
+}

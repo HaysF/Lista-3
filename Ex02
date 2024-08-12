@@ -1,0 +1,31 @@
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite o primeiro valor (valor positivo): ");
+        double primeiroValor = Convert.ToDouble(Console.ReadLine());
+
+        while (primeiroValor <= 0)
+        {
+            Console.WriteLine("Valor inválido. Por favor, digite um valor positivo.");
+            Console.Write("Digite o primeiro valor (valor positivo): ");
+            primeiroValor = Convert.ToDouble(Console.ReadLine());
+        }
+
+        double segundoValor;
+
+        do
+        {
+            Console.Write("Digite o segundo valor (deve ser maior que o primeiro valor): ");
+            segundoValor = Convert.ToDouble(Console.ReadLine());
+
+            if (segundoValor <= primeiroValor)
+            {
+                Console.WriteLine("Valor inválido. O segundo valor deve ser maior que o primeiro valor.");
+            }
+        } while (segundoValor <= primeiroValor);
+
+        Console.WriteLine($"Primeiro valor: {primeiroValor}");
+        Console.WriteLine($"Segundo valor: {segundoValor}");
+    }
+}
